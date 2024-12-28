@@ -1,0 +1,114 @@
+/* Menggunakan font Orbitron untuk tampilan futuristik */
+body {
+    background-color: #212121;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif; /* Menggunakan font Orbitron */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+}
+
+.pulse {
+    height: 100px;
+    width: 200px;
+    overflow: hidden;
+    position: absolute;
+    top: 10%; /* Default for smaller screens */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+}
+
+.pulse::after {
+    content: '';
+    display: block;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100"><polyline fill="none" stroke-width="3" stroke="white" points="2.4,58.7 70.8,58.7 76.1,46.2 81.1,58.7 89.9,58.7 93.8,66.5 102.8,22.7 110.6,78.7 115.3,58.7 126.4,58.7 134.4,54.7 142.4,58.7 197.8,58.7 "/></svg>') no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: pulse-animation 2s infinite linear;
+}
+
+.pulse::before {
+    content: '';
+    background: #444;
+    position: absolute;
+    z-index: -1;
+    left: 2px;
+    right: 2px;
+    bottom: 0;
+    top: 16px;
+    margin: auto;
+    height: 3px;  /* Stroke Width */
+}
+
+@keyframes pulse-animation {
+    0% {
+        clip: rect(0, 0, 100px, 0);
+    }
+    10% {
+        clip: rect(0, 66.67px, 100px, 0);
+    }
+    38% {
+        clip: rect(0, 133.33px, 100px, 0);
+    }
+    48% {
+        clip: rect(0, 200px, 100px, 0);
+    }
+    52% {
+        clip: rect(0, 200px, 100px, 0);
+    }
+    62% {
+        clip: rect(0, 200px, 100px, 66.67px);
+    }
+    90% {
+        clip: rect(0, 200px, 100px, 133.33px);
+    }
+    100% {
+        clip: rect(0, 200px, 100px, 200px);
+    }
+}
+
+/* Styling for the message */
+.message {
+    margin-top: 150px;
+    display: inline-block;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Orbitron', sans-serif; /* Use Orbitron for the message */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ffffff; /* White text */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Make it look more modern */
+}
+
+p {
+    font-size: 1.2em;
+    color: #f4f4f9; /* Slightly off-white for the paragraph */
+    background: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Media Query for Desktop */
+@media (min-width: 768px) {
+    .pulse {
+        top: 40%; /* Move pulse down further on desktop */
+    }
+}

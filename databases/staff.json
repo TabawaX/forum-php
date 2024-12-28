@@ -1,0 +1,32 @@
+[
+    {
+        "username": "Zhuanxie",
+        "password": "zhuzhu",
+        "id": "01",
+        "roles": ["developer"]
+    },
+    {
+        "username": "TabawaZhezhi",
+        "password": "JumanXZhezhi12345",
+        "id": "02",
+        "roles": ["databases", "moderator"]
+    },
+    {
+        "username": "pluie",
+        "password": "FPPGpeBK",
+        "id": "03",
+        "roles": ["CEO", "Assit dev"]
+    },
+    {
+        "username": "Violet",
+        "password": "Violetta",
+        "id": "04",
+        "roles": ["Databases", "Moderator"]
+    },
+    {
+        "username": "Tabawa Yannz",
+        "password": "26082009",
+        "id": "05",
+        "roles": ["Databases", "Head Mod"]
+    }
+]
