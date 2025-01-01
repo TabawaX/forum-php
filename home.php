@@ -12,13 +12,9 @@
         <p>Pilih salah satu ruangan untuk memulai:</p>
 
         <div class="room-list">
-            <a href="/request-waifu" class="room-card">
-                <h2>Request Waifu</h2>
-                <p>Ajukan permintaan waifu favorit Anda di sini.</p>
-            </a>
-            <a href="/report-bug" class="room-card">
-                <h2>Report Bug</h2>
-                <p>Laporkan masalah teknis yang Anda temui.</p>
+            <a href="/forum" class="room-card">
+                <h2>Threads</h2>
+                <p>Kalian Bisa Melihat Threads Disini.</p>
             </a>
         </div>
     </div>
